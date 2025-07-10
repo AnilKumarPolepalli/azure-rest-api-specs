@@ -26,5 +26,9 @@ jobs:
           # Keep processing when errors are written. Nonzero exit will mark the 
           # step as failed. 
           $ErrorActionPreference = 'Continue'
+
+          # Only "main" and "RPSaaSMaster" should validate all specs if core files change
+          $ignoreCoreFiles = -not (@('main', 'RPSaaSMaster') -contains $Env:GITHUB_BASE_REF)
+
           ./eng/scripts/TypeSpec-Validation.ps1 -GitClean -Verbose -BaseCommitish:HEAD~1 -HeadCommitish:HEAD~2
         shell: pwsh

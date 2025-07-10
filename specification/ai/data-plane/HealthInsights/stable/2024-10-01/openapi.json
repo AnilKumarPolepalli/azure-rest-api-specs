@@ -65,9 +65,6 @@
   "tags": [
     {
       "name": "RadiologyInsights"
-    },
-    {
-      "name": "TrialMatcher"
     }
   ],
   "paths": {
@@ -236,172 +233,6 @@
         },
         "x-ms-long-running-operation": true
       }
-    },
-    "/trial-matcher/jobs/{id}": {
-      "get": {
-        "operationId": "TrialMatcher_GetJob",
-        "tags": [
-          "TrialMatcher"
-        ],
-        "summary": "Get Trial Matcher job details",
-        "description": "Gets the status and details of the Trial Matcher job.",
-        "parameters": [
-          {
-            "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
-          },
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The unique ID of the job.",
-            "required": true,
-            "type": "string",
-            "minLength": 3,
-            "maxLength": 36,
-            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9-_]+[a-zA-Z0-9]$"
-          },
-          {
-            "$ref": "#/parameters/Azure.Core.ExpandQueryParameter"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "The request has succeeded.",
-            "schema": {
-              "$ref": "#/definitions/TrialMatcherJob"
-            },
-            "headers": {
-              "Retry-After": {
-                "type": "integer",
-                "format": "int32",
-                "description": "The Retry-After header can indicate how long the client should wait before polling the operation status."
-              },
-              "x-ms-request-id": {
-                "type": "string",
-                "format": "uuid",
-                "description": "An opaque, globally-unique, server-generated string identifier for the request."
-              }
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/HealthInsightsErrorResponse"
-            },
-            "headers": {
-              "x-ms-error-code": {
-                "type": "string",
-                "description": "String error code indicating what went wrong."
-              },
-              "x-ms-request-id": {
-                "type": "string",
-                "format": "uuid",
-                "description": "An opaque, globally-unique, server-generated string identifier for the request."
-              }
-            }
-          }
-        },
-        "x-ms-examples": {
-          "Gets the status and details of the Trial Matcher job.": {
-            "$ref": "./examples/SuccessfulTrialMatcherResponse.json"
-          }
-        }
-      },
-      "put": {
-        "operationId": "TrialMatcher_CreateJob",
-        "tags": [
-          "TrialMatcher"
-        ],
-        "summary": "Create Trial Matcher job",
-        "description": "Creates a Trial Matcher job with the given request body.",
-        "parameters": [
-          {
-            "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
-          },
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The unique ID of the job.",
-            "required": true,
-            "type": "string",
-            "minLength": 3,
-            "maxLength": 36,
-            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9-_]+[a-zA-Z0-9]$"
-          },
-          {
-            "$ref": "#/parameters/Azure.Core.ExpandQueryParameter"
-          },
-          {
-            "name": "resource",
-            "in": "body",
-            "description": "The resource instance.",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/TrialMatcherJob"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "The request has succeeded.",
-            "schema": {
-              "$ref": "#/definitions/TrialMatcherJob"
-            },
-            "headers": {
-              "Operation-Location": {
-                "type": "string",
-                "format": "uri",
-                "description": "The location for monitoring the operation state."
-              },
-              "x-ms-request-id": {
-                "type": "string",
-                "format": "uuid",
-                "description": "An opaque, globally-unique, server-generated string identifier for the request."
-              }
-            }
-          },
-          "201": {
-            "description": "The request has succeeded and a new resource has been created as a result.",
-            "schema": {
-              "$ref": "#/definitions/TrialMatcherJob"
-            },
-            "headers": {
-              "Operation-Location": {
-                "type": "string",
-                "format": "uri",
-                "description": "The location for monitoring the operation state."
-              },
-              "x-ms-request-id": {
-                "type": "string",
-                "format": "uuid",
-                "description": "An opaque, globally-unique, server-generated string identifier for the request."
-              }
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/HealthInsightsErrorResponse"
-            },
-            "headers": {
-              "x-ms-error-code": {
-                "type": "string",
-                "description": "String error code indicating what went wrong."
-              },
-              "x-ms-request-id": {
-                "type": "string",
-                "format": "uuid",
-                "description": "An opaque, globally-unique, server-generated string identifier for the request."
-              }
-            }
-          }
-        },
-        "x-ms-examples": {
-          "Creates a Trial Matcher job with the given request body.": {
-            "$ref": "./examples/SuccessfulTrialMatcherRequest.json"
-          }
-        },
-        "x-ms-long-running-operation": true
-      }
     }
   },
   "definitions": {
@@ -414,49 +245,6 @@
         }
       ],
       "x-ms-discriminator-value": "ageMismatch"
-    },
-    "AreaGeometry": {
-      "type": "object",
-      "description": "`GeoJSON` geometry, representing the area circle's center.",
-      "properties": {
-        "type": {
-          "$ref": "#/definitions/GeoJsonGeometryType",
-          "description": "`GeoJSON` geometry type."
-        },
-        "coordinates": {
-          "type": "array",
-          "description": "Coordinates of the area circle's center, represented according to the `GeoJSON` standard.\nThis is an array of 2 decimal numbers, longitude and latitude (precisely in this order).",
-          "minItems": 2,
-          "maxItems": 2,
-          "items": {
-            "type": "number",
-            "format": "float"
-          }
-        }
-      },
-      "required": [
-        "type",
-        "coordinates"
-      ]
-    },
-    "AreaProperties": {
-      "type": "object",
-      "description": "`GeoJSON` object properties.",
-      "properties": {
-        "subType": {
-          "$ref": "#/definitions/GeoJsonPropertiesSubType",
-          "description": "`GeoJSON` object sub-type."
-        },
-        "radius": {
-          "type": "number",
-          "format": "double",
-          "description": "The radius of the area's circle, in meters."
-        }
-      },
-      "required": [
-        "subType",
-        "radius"
-      ]
     },
     "AssessmentValueRange": {
       "type": "object",
@@ -522,32 +310,6 @@
           "description": "Inner error."
         }
       }
-    },
-    "ClinicalCodedElement": {
-      "type": "object",
-      "description": "A piece of clinical information, expressed as a code in a clinical coding system.",
-      "properties": {
-        "system": {
-          "type": "string",
-          "description": "The clinical coding system, e.g. ICD-10, SNOMED-CT, UMLS."
-        },
-        "code": {
-          "type": "string",
-          "description": "The code within the given clinical coding system."
-        },
-        "name": {
-          "type": "string",
-          "description": "The name of this coded concept in the coding system."
-        },
-        "value": {
-          "type": "string",
-          "description": "A value associated with the code within the given clinical coding system."
-        }
-      },
-      "required": [
-        "system",
-        "code"
-      ]
     },
     "ClinicalDocumentType": {
       "type": "string",
@@ -1041,24 +803,6 @@
       ],
       "x-ms-discriminator-value": "completeOrderDiscrepancy"
     },
-    "ContactDetails": {
-      "type": "object",
-      "description": "A person's contact details.",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The person's name."
-        },
-        "email": {
-          "type": "string",
-          "description": "The person's email."
-        },
-        "phone": {
-          "type": "string",
-          "description": "A person's phone number."
-        }
-      }
-    },
     "CriticalResult": {
       "type": "object",
       "description": "Critical Result consists of two properties.",
@@ -1248,40 +992,6 @@
           }
         ]
       }
-    },
-    "ExtendedClinicalCodedElement": {
-      "type": "object",
-      "description": "A piece of clinical information, expressed as a code in a clinical coding system, extended by semantic information.",
-      "properties": {
-        "system": {
-          "type": "string",
-          "description": "The clinical coding system, e.g. ICD-10, SNOMED-CT, UMLS."
-        },
-        "code": {
-          "type": "string",
-          "description": "The code within the given clinical coding system."
-        },
-        "name": {
-          "type": "string",
-          "description": "The name of this coded concept in the coding system."
-        },
-        "value": {
-          "type": "string",
-          "description": "A value associated with the code within the given clinical coding system."
-        },
-        "semanticType": {
-          "type": "string",
-          "description": "The [UMLS semantic type](https://www.nlm.nih.gov/research/umls/META3_current_semantic_types.html) associated with the coded concept."
-        },
-        "category": {
-          "type": "string",
-          "description": "The bio-medical category related to the coded concept, e.g. Diagnosis, Symptom, Medication, Examination."
-        }
-      },
-      "required": [
-        "system",
-        "code"
-      ]
     },
     "Fhir.R4.Annotation": {
       "type": "object",
@@ -2820,101 +2530,6 @@
       ],
       "x-ms-discriminator-value": "genericProcedureRecommendation"
     },
-    "GeoJsonGeometryType": {
-      "type": "string",
-      "description": "`GeoJSON` geometry type.",
-      "enum": [
-        "Point"
-      ],
-      "x-ms-enum": {
-        "name": "GeoJsonGeometryType",
-        "modelAsString": true,
-        "values": [
-          {
-            "name": "Point",
-            "value": "Point"
-          }
-        ]
-      }
-    },
-    "GeoJsonPropertiesSubType": {
-      "type": "string",
-      "description": "`GeoJSON` object sub-type.",
-      "enum": [
-        "Circle"
-      ],
-      "x-ms-enum": {
-        "name": "GeoJsonPropertiesSubType",
-        "modelAsString": true,
-        "values": [
-          {
-            "name": "Circle",
-            "value": "Circle"
-          }
-        ]
-      }
-    },
-    "GeoJsonType": {
-      "type": "string",
-      "description": "`GeoJSON` type.",
-      "enum": [
-        "Feature"
-      ],
-      "x-ms-enum": {
-        "name": "GeoJsonType",
-        "modelAsString": true,
-        "values": [
-          {
-            "name": "Feature",
-            "value": "Feature"
-          }
-        ]
-      }
-    },
-    "GeographicArea": {
-      "type": "object",
-      "description": "A geographic area, expressed as a `Circle` geometry represented using a `GeoJSON Feature` (see [GeoJSON spec](https://tools.ietf.org/html/rfc7946)).",
-      "properties": {
-        "type": {
-          "$ref": "#/definitions/GeoJsonType",
-          "description": "`GeoJSON` type."
-        },
-        "geometry": {
-          "$ref": "#/definitions/AreaGeometry",
-          "description": "`GeoJSON` geometry, representing the area circle's center."
-        },
-        "properties": {
-          "$ref": "#/definitions/AreaProperties",
-          "description": "`GeoJSON` object properties."
-        }
-      },
-      "required": [
-        "type",
-        "geometry",
-        "properties"
-      ]
-    },
-    "GeographicLocation": {
-      "type": "object",
-      "description": "A location given as a combination of city, state and country/region. It could specify a city, a state or a country/region.\nIn case a city is specified, either state +country/region or country/region (for countries/regions where there are no states) should be added.\nIn case a state is specified (without a city), country/region should be added.",
-      "properties": {
-        "city": {
-          "type": "string",
-          "description": "City name."
-        },
-        "state": {
-          "type": "string",
-          "description": "State name."
-        },
-        "countryOrRegion": {
-          "type": "string",
-          "description": "Country/region name."
-        }
-      },
-      "required": [
-        "countryOrRegion"
-      ]
-    },
     "GuidanceInference": {
       "type": "object",
       "description": "A guidance inference collects structured information about a specific finding in the report and can possibly propose appropriate follow-up recommendations, based upon established, evidence-based best practices i.e. ACR guidelines.",
@@ -4368,7 +3983,7 @@
         },
         "singleValue": {
           "type": "string",
-          "description": "The value. If the value is a range, use field valueRange."
+          "description": "The value. If the value is a range, use field rangeValue."
         },
         "rangeValue": {
           "$ref": "#/definitions/AssessmentValueRange",
