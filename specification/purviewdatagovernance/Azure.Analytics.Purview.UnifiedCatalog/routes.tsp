@@ -21,7 +21,6 @@ alias UnifiedCatalogOperations = Azure.Core.ResourceOperations<ServiceTraits>;
  * with a Retry-After header indicating the block duration (typically 5 seconds).
  * Clients should implement exponential backoff when receiving 429 responses.
  */
-
 interface CriticalDataElements {
   #suppress "@azure-tools/typespec-azure-core/use-standard-names" "This is an existing service operation."
   #suppress "@azure-tools/typespec-azure-core/casing-style" "This is an existing service operation."

@@ -8,8 +8,6 @@ using TypeSpec.Http;
 
 namespace PurviewUnifiedCatalog;
 
-
-
 @doc("Status of a catalog model entity indicating its lifecycle state.")
 union CatalogModelStatus {
   @doc("The entity is in draft state.")
