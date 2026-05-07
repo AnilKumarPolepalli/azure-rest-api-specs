@@ -88,7 +88,7 @@
         "tags": [
           "BusinessDomain"
         ],
-        "description": "Enumerates business domains with optional continuation token and write-obligation filtering.",
+        "description": "Enumerates business domains with optional continuation token and write-obligation filtering. Rate limit: 500 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -142,7 +142,7 @@
         "tags": [
           "BusinessDomain"
         ],
-        "description": "Creates a new business domain.",
+        "description": "Creates a new business domain. Rate limit: 200 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -190,7 +190,7 @@
         "tags": [
           "BusinessDomain"
         ],
-        "description": "Retrieves a business domain by identifier.",
+        "description": "Retrieves a business domain by identifier. Rate limit: 2,000 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -235,7 +235,7 @@
         "tags": [
           "BusinessDomain"
         ],
-        "description": "Updates an existing business domain.",
+        "description": "Updates an existing business domain. Rate limit: 150 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -289,7 +289,7 @@
         "tags": [
           "BusinessDomain"
         ],
-        "description": "Deletes an existing business domain.",
+        "description": "Deletes an existing business domain. Rate limit: 80 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -333,7 +333,7 @@
         "tags": [
           "CriticalDataElements"
         ],
-        "description": "Searches and retrieves critical data elements based on domain, keyword, and other filters.",
+        "description": "Searches and retrieves critical data elements based on domain, keyword, and other filters. Rate limit: 100 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -401,7 +401,7 @@
         "tags": [
           "CriticalDataElements"
         ],
-        "description": "Creates a new critical data element in the catalog.",
+        "description": "Creates a new critical data element in the catalog. Rate limit: 200 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -449,7 +449,7 @@
         "tags": [
           "CriticalDataElements"
         ],
-        "description": "Searches and retrieves critical data elements based on Id.",
+        "description": "Searches and retrieves critical data elements based on Id. Rate limit: 1,500 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -494,7 +494,7 @@
         "tags": [
           "CriticalDataElements"
         ],
-        "description": "Updates an existing critical data element in the catalog.",
+        "description": "Updates an existing critical data element in the catalog. Rate limit: 150 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -548,7 +548,7 @@
         "tags": [
           "CriticalDataElements"
         ],
-        "description": "Deletes an existing critical data element in the catalog.",
+        "description": "Deletes an existing critical data element in the catalog. Rate limit: 80 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -592,7 +592,7 @@
         "tags": [
           "CriticalDataElements"
         ],
-        "description": "Lists relationships for the specified CDE and entity category.",
+        "description": "Lists relationships for the specified CDE and entity category. Rate limit: 1,500 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -739,7 +739,7 @@
         "tags": [
           "CriticalDataElements"
         ],
-        "description": "Creates a relationship between the specified CDE and another entity.",
+        "description": "Creates a relationship between the specified CDE and another entity. Rate limit: 200 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -892,7 +892,7 @@
         "tags": [
           "CriticalDataElements"
         ],
-        "description": "Deletes a relationship between the CDE and the specified entity.",
+        "description": "Deletes a relationship between the CDE and the specified entity. Rate limit: 80 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -1043,7 +1043,7 @@
         "tags": [
           "CriticalDataElements"
         ],
-        "description": "Retrieves facets for critical data elements.",
+        "description": "Retrieves facets for critical data elements. Rate limit: 1,500 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -1091,7 +1091,7 @@
         "tags": [
           "CriticalDataElements"
         ],
-        "description": "Queries critical data elements based on various criteria.",
+        "description": "Queries critical data elements based on various criteria. Rate limit: 800 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -1142,7 +1142,7 @@
         "tags": [
           "CriticalDataElements"
         ],
-        "description": "Retrieves the count of duplicate critical data elements by passing namekeyword.",
+        "description": "Retrieves the count of duplicate critical data elements by passing namekeyword. Rate limit: 200 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -1190,7 +1190,7 @@
         "tags": [
           "DataAsset"
         ],
-        "description": "Lists data assets with optional ordering and pagination.",
+        "description": "Lists data assets with optional ordering and pagination. Rate limit: 150 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -1250,7 +1250,7 @@
         "tags": [
           "DataAsset"
         ],
-        "description": "Creates a new data asset.",
+        "description": "Creates a new data asset. Rate limit: 500 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -1298,7 +1298,7 @@
         "tags": [
           "DataAsset"
         ],
-        "description": "Retrieves a data asset by its unique identifier.",
+        "description": "Retrieves a data asset by its unique identifier. Rate limit: 1,000 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -1357,7 +1357,7 @@
         "tags": [
           "DataAsset"
         ],
-        "description": "Updates a data asset by its unique identifier.",
+        "description": "Updates a data asset by its unique identifier. Rate limit: 350 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -1411,7 +1411,7 @@
         "tags": [
           "DataAsset"
         ],
-        "description": "Deletes a data asset by its unique identifier.",
+        "description": "Deletes a data asset by its unique identifier. Rate limit: 80 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -1455,7 +1455,7 @@
         "tags": [
           "DataAsset"
         ],
-        "description": "Lists relationships for a data asset filtered by entity category.",
+        "description": "Lists relationships for a data asset filtered by entity category. Rate limit: 1,500 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -1602,7 +1602,7 @@
         "tags": [
           "DataAsset"
         ],
-        "description": "Creates a relationship between the specified data asset and another entity.",
+        "description": "Creates a relationship between the specified data asset and another entity. Rate limit: 600 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -1755,7 +1755,7 @@
         "tags": [
           "DataAsset"
         ],
-        "description": "Deletes relationships for a data asset.",
+        "description": "Deletes relationships for a data asset. Rate limit: 80 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -1906,7 +1906,7 @@
         "tags": [
           "DataAsset"
         ],
-        "description": "Retrieves data assets with filtered query inputs.",
+        "description": "Retrieves data assets with filtered query inputs. Rate limit: 800 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -1957,7 +1957,7 @@
         "tags": [
           "DataColumn"
         ],
-        "description": "Retrieves a single data column by identifier.",
+        "description": "Retrieves a single data column by identifier. Rate limit: 1,500 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -2018,7 +2018,7 @@
         "tags": [
           "DataColumn"
         ],
-        "description": "Lists related entities for a data column by category and optional relationship type.",
+        "description": "Lists related entities for a data column by category and optional relationship type. Rate limit: 1,500 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -2165,7 +2165,7 @@
         "tags": [
           "DataColumn"
         ],
-        "description": "Adds a related entity to a data column.",
+        "description": "Adds a related entity to a data column. Rate limit: 600 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -2318,7 +2318,7 @@
         "tags": [
           "DataColumn"
         ],
-        "description": "Deletes a related entity from a data column.",
+        "description": "Deletes a related entity from a data column. Rate limit: 80 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -2469,7 +2469,7 @@
         "tags": [
           "DataColumn"
         ],
-        "description": "Ingests a data column.",
+        "description": "Ingests a data column. Rate limit: 200 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -2517,7 +2517,7 @@
         "tags": [
           "DataColumn"
         ],
-        "description": "Queries data columns based on specified criteria.",
+        "description": "Queries data columns based on specified criteria. Rate limit: 100 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -2568,7 +2568,7 @@
         "tags": [
           "DataProduct"
         ],
-        "description": "Lists data products with optional domain filter, sorting and pagination.",
+        "description": "Lists data products with optional domain filter, sorting and pagination. Rate limit: 100 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -2629,7 +2629,7 @@
         "tags": [
           "DataProduct"
         ],
-        "description": "Creates a new data product.",
+        "description": "Creates a new data product. Rate limit: 200 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -2677,7 +2677,7 @@
         "tags": [
           "DataProduct"
         ],
-        "description": "Retrieves a data product by its dataProductId.",
+        "description": "Retrieves a data product by its dataProductId. Rate limit: 1,500 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -2722,7 +2722,7 @@
         "tags": [
           "DataProduct"
         ],
-        "description": "Updates a data product by its DataProductId.",
+        "description": "Updates a data product by its DataProductId. Rate limit: 150 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -2776,7 +2776,7 @@
         "tags": [
           "DataProduct"
         ],
-        "description": "Deletes a data product by its dataProductId.",
+        "description": "Deletes a data product by its dataProductId. Rate limit: 80 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -2820,7 +2820,7 @@
         "tags": [
           "DataProduct"
         ],
-        "description": "Lists relationships for a data product filtered by entity category.",
+        "description": "Lists relationships for a data product filtered by entity category. Rate limit: 1,500 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -2967,7 +2967,7 @@
         "tags": [
           "DataProduct"
         ],
-        "description": "Creates a relationship for a data product.",
+        "description": "Creates a relationship for a data product. Rate limit: 600 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -3120,7 +3120,7 @@
         "tags": [
           "DataProduct"
         ],
-        "description": "Deletes a relationship between the data product and a specified entity.",
+        "description": "Deletes a relationship between the data product and a specified entity. Rate limit: 80 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -3271,7 +3271,7 @@
         "tags": [
           "DataProduct"
         ],
-        "description": "Retrieves facets for data products based on the supplied facets request.",
+        "description": "Retrieves facets for data products based on the supplied facets request. Rate limit: 1,500 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -3319,7 +3319,7 @@
         "tags": [
           "DataProduct"
         ],
-        "description": "Queries data products using the provided filter payload.",
+        "description": "Queries data products using the provided filter payload. Rate limit: 800 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -3377,7 +3377,7 @@
         "tags": [
           "DataProduct"
         ],
-        "description": "Retrieves the count of duplicate DataProduct by passing namekeyword.",
+        "description": "Retrieves the count of duplicate DataProduct by passing namekeyword. Rate limit: 200 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -3425,7 +3425,7 @@
         "tags": [
           "OKR"
         ],
-        "description": "Lists objectives with optional filters, sorting and pagination.",
+        "description": "Lists objectives with optional filters, sorting and pagination. Rate limit: 100 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -3492,7 +3492,7 @@
         "tags": [
           "OKR"
         ],
-        "description": "Creates a new objective (OKR).",
+        "description": "Creates a new objective (OKR). Rate limit: 200 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -3540,7 +3540,7 @@
         "tags": [
           "OKR"
         ],
-        "description": "Retrieves an objective by identifier.",
+        "description": "Retrieves an objective by identifier. Rate limit: 1,500 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -3585,7 +3585,7 @@
         "tags": [
           "OKR"
         ],
-        "description": "Updates an existing objective (OKR) by ID.",
+        "description": "Updates an existing objective (OKR) by ID. Rate limit: 150 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -3639,7 +3639,7 @@
         "tags": [
           "OKR"
         ],
-        "description": "Deletes an objective by identifier.",
+        "description": "Deletes an objective by identifier. Rate limit: 80 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -3683,7 +3683,7 @@
         "tags": [
           "OKR"
         ],
-        "description": "Lists key results for a given objective.",
+        "description": "Lists key results for a given objective. Rate limit: 100 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -3731,7 +3731,7 @@
         "tags": [
           "OKR"
         ],
-        "description": "Creates a key result under the specified objective.",
+        "description": "Creates a key result under the specified objective. Rate limit: 200 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -3787,7 +3787,7 @@
         "tags": [
           "OKR"
         ],
-        "description": "Retrieves a key result by its identifier under the specified objective",
+        "description": "Retrieves a key result by its identifier under the specified objective. Rate limit: 1,500 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -3840,7 +3840,7 @@
         "tags": [
           "OKR"
         ],
-        "description": "Updates a key result under the specified objective.",
+        "description": "Updates a key result under the specified objective. Rate limit: 150 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -3902,7 +3902,7 @@
         "tags": [
           "OKR"
         ],
-        "description": "Deletes a key result by its identifier under the specified objective.",
+        "description": "Deletes a key result by its identifier under the specified objective. Rate limit: 80 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -3954,7 +3954,7 @@
         "tags": [
           "OKR"
         ],
-        "description": "Retrieves the facets for objectives (OKRs).",
+        "description": "Retrieves the facets for objectives (OKRs). Rate limit: 1,500 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -4002,7 +4002,7 @@
         "tags": [
           "OKR"
         ],
-        "description": "Queries objectives (OKRs) based on specified criteria.",
+        "description": "Queries objectives (OKRs) based on specified criteria. Rate limit: 800 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -4053,7 +4053,7 @@
         "tags": [
           "OKR"
         ],
-        "description": "Retrieves the count of duplicate objectives/OKRs by passing definition.",
+        "description": "Retrieves the count of duplicate objectives/OKRs by passing definition. Rate limit: 200 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -4101,7 +4101,7 @@
         "tags": [
           "Policy"
         ],
-        "description": "Lists policies with optional continuation token.",
+        "description": "Lists policies with optional continuation token. Rate limit: 100 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -4147,7 +4147,7 @@
         "tags": [
           "Policy"
         ],
-        "description": "Updates a policy by its identifier.\n1. BusinessDomain - Governance Domain Owners, Governance Domain Readers\n2. Data Quality - Data Product Owners, Data Steward, Data Quality Readers, Data Quality Metadata Readers, Data Profile Stewards, Data Profile Readers\n3. Data Governance - Data Governance Administrators, Data Health Readers, Data Health Owners, Governance Domain Creators, Global Asset Curators, Global Catalog Readers",
+        "description": "Updates a policy by its identifier. Rate limit: 200 requests per 20-second window.\n1. BusinessDomain - Governance Domain Owners, Governance Domain Readers\n2. Data Quality - Data Product Owners, Data Steward, Data Quality Readers, Data Quality Metadata Readers, Data Profile Stewards, Data Profile Readers\n3. Data Governance - Data Governance Administrators, Data Health Readers, Data Health Owners, Governance Domain Creators, Global Asset Curators, Global Catalog Readers",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -4209,7 +4209,7 @@
         "tags": [
           "Term"
         ],
-        "description": "Lists terms with optional domain/parent/keyword filters and pagination.",
+        "description": "Lists terms with optional domain/parent/keyword filters and pagination. Rate limit: 100 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -4293,7 +4293,7 @@
         "tags": [
           "Term"
         ],
-        "description": "Creates a new term in the catalog.",
+        "description": "Creates a new term in the catalog. Rate limit: 200 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -4341,7 +4341,7 @@
         "tags": [
           "Term"
         ],
-        "description": "Retrieves a single term by identifier.",
+        "description": "Retrieves a single term by identifier. Rate limit: 1,500 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -4386,7 +4386,7 @@
         "tags": [
           "Term"
         ],
-        "description": "Updates an existing term",
+        "description": "Updates an existing term. Rate limit: 150 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -4440,7 +4440,7 @@
         "tags": [
           "Term"
         ],
-        "description": "Deletes a term by its unique identifier.",
+        "description": "Deletes a term by its unique identifier. Rate limit: 80 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -4484,7 +4484,7 @@
         "tags": [
           "Term"
         ],
-        "description": "Lists hierarchical terms under the specified term id.",
+        "description": "Lists hierarchical terms under the specified term id. Rate limit: 200 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -4534,7 +4534,7 @@
         "tags": [
           "Term"
         ],
-        "description": "Lists related entities for a term by category and optional relationship type.",
+        "description": "Lists related entities for a term by category and optional relationship type. Rate limit: 1,500 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -4714,7 +4714,7 @@
         "tags": [
           "Term"
         ],
-        "description": "Adds a related entity to a term.",
+        "description": "Adds a related entity to a term. Rate limit: 600 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -4867,7 +4867,7 @@
         "tags": [
           "Term"
         ],
-        "description": "Deletes a related entity from a term.",
+        "description": "Deletes a related entity from a term. Rate limit: 80 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -5051,7 +5051,7 @@
         "tags": [
           "Term"
         ],
-        "description": "Retrieves facets for terms.",
+        "description": "Retrieves facets for terms. Rate limit: 1,500 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -5099,7 +5099,7 @@
         "tags": [
           "Term"
         ],
-        "description": "Queries terms based on the provided request.",
+        "description": "Queries terms based on the provided request. Rate limit: 800 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"
@@ -5150,7 +5150,7 @@
         "tags": [
           "Term"
         ],
-        "description": "Retrieves the count of duplicate Term by passing namekeyword.",
+        "description": "Retrieves the count of duplicate Term by passing namekeyword. Rate limit: 200 requests per 20-second window.",
         "parameters": [
           {
             "$ref": "#/parameters/Azure.Core.Foundations.ApiVersionParameter"

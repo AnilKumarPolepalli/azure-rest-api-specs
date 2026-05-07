@@ -8,6 +8,27 @@ using TypeSpec.Http;
 
 namespace PurviewUnifiedCatalog;
 
+/**
+ * Response returned when a request is throttled due to exceeding rate limits.
+ * Requests are rate-limited using a sliding window of 20 seconds.
+ * When throttled, the client should wait for the duration specified in the Retry-After header before retrying.
+ */
+@doc("Response returned when the request rate limit has been exceeded. Retry after the specified duration.")
+@error
+model TooManyRequestsResponse {
+  @doc("HTTP status code 429 indicating the request was throttled.")
+  @statusCode
+  statusCode: 429;
+
+  @doc("The number of seconds the client should wait before retrying the request.")
+  @header("Retry-After")
+  retryAfter: int32;
+
+  @doc("Error details describing the throttling reason.")
+  @body
+  error: Azure.Core.Foundations.Error;
+}
+
 @doc("Status of a catalog model entity indicating its lifecycle state.")
 union CatalogModelStatus {
   @doc("The entity is in draft state.")
